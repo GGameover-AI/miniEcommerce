@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tuj/kewapxY=",
+  "dgSpecHash": "eMXRzAk+vTU=",
   "success": true,
-  "projectFilePath": "D:\\MiniProject\\6PngC#\\miniEcommerce\\backend\\backend.csproj",
+  "projectFilePath": "D:\\MiniProject\\myProject\\miniEcommerce\\backend\\backend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\GGameover\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.7\\microsoft.aspnetcore.openapi.9.0.7.nupkg.sha512",
     "C:\\Users\\GGameover\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"

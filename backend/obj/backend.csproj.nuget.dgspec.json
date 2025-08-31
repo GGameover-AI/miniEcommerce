@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\MiniProject\\6PngC#\\miniEcommerce\\backend\\backend.csproj": {}
+    "D:\\MiniProject\\myProject\\miniEcommerce\\backend\\backend.csproj": {}
   },
   "projects": {
-    "D:\\MiniProject\\6PngC#\\miniEcommerce\\backend\\backend.csproj": {
+    "D:\\MiniProject\\myProject\\miniEcommerce\\backend\\backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MiniProject\\6PngC#\\miniEcommerce\\backend\\backend.csproj",
+        "projectUniqueName": "D:\\MiniProject\\myProject\\miniEcommerce\\backend\\backend.csproj",
         "projectName": "backend",
-        "projectPath": "D:\\MiniProject\\6PngC#\\miniEcommerce\\backend\\backend.csproj",
+        "projectPath": "D:\\MiniProject\\myProject\\miniEcommerce\\backend\\backend.csproj",
         "packagesPath": "C:\\Users\\GGameover\\.nuget\\packages\\",
-        "outputPath": "D:\\MiniProject\\6PngC#\\miniEcommerce\\backend\\obj\\",
+        "outputPath": "D:\\MiniProject\\myProject\\miniEcommerce\\backend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
