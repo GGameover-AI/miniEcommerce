@@ -1,9 +1,10 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
+import { Navbar } from './navbar/navbar';
 
 
 @Component({
   selector: 'app-root',
-  imports: [],
+  imports: [Navbar],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
