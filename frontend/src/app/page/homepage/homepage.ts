@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { NgFor,NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-homepage',
-  imports: [],
+  imports: [NgFor,NgClass],
   templateUrl: './homepage.html',
   styleUrl: './homepage.css'
 })
@@ -33,6 +34,23 @@ export class Homepage {
     { id: 20, name: "กางเกงขาสั้น", category: "เสื้อผ้า", descript: "Lorem ipsum dolor sit amet", price: 200, quantity: 28 }
   ];
 
-  
+  productPerPage = 10
+  currentPage = 1
+  productList = this.products
+
+  get pagitionProduct() {
+    const pagitionStart = (this.currentPage - 1) * this.productPerPage
+    const pagitionEnd = pagitionStart + this.productPerPage
+    return this.productList.slice(pagitionStart, pagitionEnd);
+  }
+
+  onNextPage(page:number){
+    this.currentPage = page
+    console.log("Current Page : "+this.currentPage)
+  }
+
+  get totalPages(){
+    return Math.ceil(this.productList.length / this.productPerPage)
+  }
 
 }
