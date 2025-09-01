@@ -1,1 +1,17 @@
-<p>homepage works!</p>
+<div class="text-black grid grid-cols-1  gap-1">
+  @for (item of products; track item.id) {
+  <div class="bg-amber-100 pl-2">
+    <h1 class="text-xl">{{ item.name }}</h1>
+    <p class="text-base">{{ item.category }}</p>
+    <p class="text-base">{{ item.descript }}</p>
+    <p class="text-base">เหลือ : {{ item.quantity }}</p>
+    <p class="text-base">ราคา : {{ item.price }}</p>
+  </div>
+  }@empty {
+  <p>ไม่พบสินค้า</p>
+  }
+  <div class="flex justify-center gap-5 my-5">
+    <button class="focus:bg-blue-800 focus:text-white outline outline-blue-500 bg-blue-200 min-w-6 min-h-6">1</button>
+    <button class="focus:bg-blue-800 focus:text-white outline outline-blue-500 bg-blue-200 min-w-6 min-h-6">2</button>
+  </div>
+</div>
