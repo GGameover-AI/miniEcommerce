@@ -1,25 +1,40 @@
 <div>
-  <div class="text-black grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-1">
-    <div class="bg-cyan-100 pl-2" *ngFor="let item of pagitionProduct">
-      <h1 class="text-xl">{{ item.name }}</h1>
-      <p class="text-base">{{ item.category }}</p>
-      <p class="text-base">{{ item.descript }}</p>
-      <p class="text-base">เหลือ : {{ item.quantity }}</p>
-      <p class="text-base">ราคา : {{ item.price }}</p>
+  <div class="text-black grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+    <div
+      class="flex lg:flex-col justify-between items-center bg-blue-100 px-2 py-5 text-sm border-b border-black/20"
+      *ngFor="let item of pagitionProduct"
+    >
+      <span>
+        <img
+          src="https://images.unsplash.com/photo-1525351484163-7529414344d8?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          class="w-16 h-16 lg:w-3xl lg:h-64"
+        />
+      </span>
+      <div class="flex justify-between w-full">
+        <div class="flex flex-col gap-2 pl-4 w-32">
+          <h1 class="text-base">{{ item.name }}</h1>
+          <p class="md:hidden text-black/60">เหลือ : {{ item.quantity }}</p>
+          <p class="hidden md:block truncate">{{ item.descript }}</p>
+        </div>
+        <p class="hidden md:block">เหลือ : {{ item.quantity }}</p>
+        <button class="bg-amber-500 px-4 py-2 w-24 rounded-2xl">
+          {{ item.price | currency : '฿' }}
+        </button>
+      </div>
     </div>
   </div>
 
   <div class="flex justify-center gap-5 py-5">
-      <button
-        *ngFor="let page of [].constructor(totalPages); let i = index"
-        (click)="onNextPage(i + 1)"
-        [ngClass]="{
-          'bg-blue-800 text-white': currentPage === i + 1,
-          'bg-blue-200 text-black': currentPage !== i + 1
-        }"
-        class="outline outline-blue-500 min-w-6 min-h-6"
-      >
-        {{ i + 1 }}
-      </button>
-    </div>
+    <button
+      *ngFor="let page of [].constructor(totalPages); let i = index"
+      (click)="onNextPage(i + 1)"
+      [ngClass]="{
+        'bg-blue-800 text-white': currentPage === i + 1,
+        'bg-blue-200 text-black': currentPage !== i + 1
+      }"
+      class="outline outline-blue-500 min-w-6 min-h-6"
+    >
+      {{ i + 1 }}
+    </button>
+  </div>
 </div>

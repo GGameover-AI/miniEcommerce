@@ -1,9 +1,11 @@
-import { Component } from '@angular/core';
-import { NgFor,NgClass } from '@angular/common';
+import { Component,Pipe } from '@angular/core';
+import { NgFor,NgClass, CurrencyPipe } from '@angular/common';
+
+
 
 @Component({
   selector: 'app-homepage',
-  imports: [NgFor,NgClass],
+  imports: [NgFor,NgClass,CurrencyPipe],
   templateUrl: './homepage.html',
   styleUrl: './homepage.css'
 })
