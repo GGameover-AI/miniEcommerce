@@ -2,7 +2,7 @@
   class="flex bg-blue-700 py-2 shadow-md z-50"
 >
   <div class="flex relative w-full items-center justify-evenly lg:justify-between px-5">
-    <a href="" class="hidden lg:block">Brand</a>
+    <a href="" class="hidden lg:block lg:text-4xl font-bold">Brand</a>
     <button (click)="toggleFillter()" class="pr-5 lg:hidden">
       <svg
         class="w-6 h-6 text-gray-800 dark:text-white"
@@ -61,7 +61,7 @@
       </svg>
     </div>
     <!--filtter menu-->
-    <div [ngClass]="['absolute mt-2 pb-2 left-0 top-full w-full bg-slate-700 px-5 ' + (isToggleFillter? 'block':'hidden') ]">
+    <div [ngClass]="['absolute mt-2 pb-2 left-0 top-full w-full bg-slate-700 px-5 lg:hidden ' + (isToggleFillter? 'block':'hidden') ]">
       <h3 class="font-bold text-center">หมวดหมู่</h3>
       <ul class="flex flex-col gap-2">
         <li><button>อาหาร</button></li>

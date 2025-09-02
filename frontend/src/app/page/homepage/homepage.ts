@@ -1,15 +1,14 @@
-import { Component,Pipe } from '@angular/core';
-import { NgFor,NgClass, CurrencyPipe } from '@angular/common';
-
-
+import { Component, Pipe,} from '@angular/core';
+import { NgFor, NgClass, CurrencyPipe } from '@angular/common';
 
 @Component({
   selector: 'app-homepage',
-  imports: [NgFor,NgClass,CurrencyPipe],
+  imports: [NgFor, NgClass, CurrencyPipe,],
   templateUrl: './homepage.html',
   styleUrl: './homepage.css'
 })
 export class Homepage {
+
   products = [
     { id: 1, name: "ข้าวหอมมะลิ", category: "อาหาร", descript: "Lorem ipsum dolor sit amet", price: 50, quantity: 10 },
     { id: 2, name: "สลัดผักรวม", category: "อาหาร", descript: "Lorem ipsum dolor sit amet", price: 80, quantity: 15 },
@@ -46,12 +45,12 @@ export class Homepage {
     return this.productList.slice(pagitionStart, pagitionEnd);
   }
 
-  onNextPage(page:number){
+  onNextPage(page: number) {
     this.currentPage = page
-    console.log("Current Page : "+this.currentPage)
+    console.log("Current Page : " + this.currentPage)
   }
 
-  get totalPages(){
+  get totalPages() {
     return Math.ceil(this.productList.length / this.productPerPage)
   }
 
