@@ -11,14 +11,12 @@ import { ProductsModel } from '../../models/products-model';
 })
 export class Homepage implements OnInit {
 
-  products:ProductsModel[] = []
-  productList:ProductsModel[] = []
+  productList:ProductsModel[]=[]
 
   //นำเข้า products
   constructor(private stockService:Stock){}
   ngOnInit(): void {
-      this.products = this.stockService.getProduct()
-      this.productList = [...this.products]
+      this.productList = this.stockService.getProduct()
   }
 
   setFillterProduct(category:string){

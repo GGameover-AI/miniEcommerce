@@ -15,5 +15,8 @@ export class Navbar {
     this.isToggleFillter = !this.isToggleFillter
   }
 
+  setFillterProduct(catergory:string){
+    
+  }
   
 }

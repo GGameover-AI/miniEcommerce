@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
+import { ProductsModel } from '../models/products-model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class Stock {
-  baseProduct = [
+  baseProduct:ProductsModel[] = [
     { id: 1, name: "ข้าวหอมมะลิ", category: "อาหาร", descript: "Lorem ipsum dolor sit amet", price: 50, quantity: 10 },
     { id: 2, name: "สลัดผักรวม", category: "อาหาร", descript: "Lorem ipsum dolor sit amet", price: 80, quantity: 15 },
     { id: 3, name: "ไก่ย่างสมุนไพร", category: "อาหาร", descript: "Lorem ipsum dolor sit amet", price: 120, quantity: 8 },
@@ -34,19 +35,21 @@ export class Stock {
     { id: 23, name: "RTX 9090", category: "ไอที", descript: "Lorem ipsum dolor sit amet", price: 1000000, quantity: 0 }
   ];
 
-  products = this.baseProduct.filter(p => p.quantity != 0)
+  productRemain:ProductsModel[] = this.baseProduct.filter(p => p.quantity != 0)
+  productList:ProductsModel[] = this.productRemain
+   
 
   constructor(){}
 
   getProduct(){
-    return [...this.products]
+    return [...this.productList]
   }
 
   fillterProduct(category: string) {
     if(!category || category === 'ทั้งหมด'){
-      return [...this.products]
+      return [...this.productList]
     }else{
-      return this.products.filter(p => p.category === category)
+      return this.productList.filter(p => p.category === category)
     }
   }
 }
