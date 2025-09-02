@@ -28,7 +28,8 @@
     />
     <!--user | cart-->
     <div class="flex justify-center items-center">
-      <svg
+      <a routerLink="">
+        <svg
         class="w-6 h-6 text-gray-800 dark:text-white"
         aria-hidden="true"
         xmlns="http://www.w3.org/2000/svg"
@@ -43,8 +44,10 @@
           clip-rule="evenodd"
         />
       </svg>
+      </a>
       |
-      <svg
+      <a routerLink="/cart">
+        <svg
         class="w-6 h-6 text-gray-800 dark:text-white pl-0.5"
         aria-hidden="true"
         xmlns="http://www.w3.org/2000/svg"
@@ -59,6 +62,7 @@
           clip-rule="evenodd"
         />
       </svg>
+      </a>
     </div>
     <!--filtter menu-->
     <div [ngClass]="['absolute mt-2 pb-2 left-0 top-full w-full bg-slate-700 px-5 lg:hidden ' + (isToggleFillter? 'block':'hidden') ]">
