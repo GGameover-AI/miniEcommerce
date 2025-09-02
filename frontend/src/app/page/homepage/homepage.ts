@@ -1,4 +1,4 @@
-import { Component, Pipe,} from '@angular/core';
+import { Component, Pipe, } from '@angular/core';
 import { NgFor, NgClass, CurrencyPipe } from '@angular/common';
 
 @Component({
@@ -52,6 +52,15 @@ export class Homepage {
 
   get totalPages() {
     return Math.ceil(this.productList.length / this.productPerPage)
+  }
+
+  setFillterProduct(category: string) {
+    if(!category || category === 'ทั้งหมด'){
+      this.productList = [...this.products]
+    }else{
+      this.productList = this.products.filter(p => p.category === category)
+    }
+    this.currentPage = 1
   }
 
 }

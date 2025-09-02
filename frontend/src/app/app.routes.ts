@@ -7,5 +7,6 @@ export const routes: Routes = [
     {path:'',component:Homepage},
     {path:'cart',component:Cartpage},
     {path:'payment',component:Paymentpage},
+    {path:'**',redirectTo:''}
     
 ];
